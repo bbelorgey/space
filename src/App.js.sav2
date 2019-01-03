@@ -1,0 +1,50 @@
+import React, { Component } from 'react';
+import Simon from './components/Simon';
+import './App.css';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      val:["aaaaaaaaaaa","bbbbbbbbbbbb","ccccccccccccccc","dddddddddddddddd","eeeeeeeeeeeeeeeee"],
+      affichage:"depart",
+      compteur:0
+    }
+  }
+
+  finish(intervalId) {
+    clearInterval(intervalId);
+  }
+
+  tirageAleatoire = (intervalId) => {
+    const {compteur,val} = this.state;
+    let i = compteur;
+    console.log(compteur);
+    if(compteur>=val.length) {
+      this.finish(intervalId);
+      return;
+    }
+    this.setState({affichage:`${val[compteur]}`,compteur:++i});
+    return;
+  }
+
+  constJSX = () => {
+    const {compteur} = this.state;    
+    console.log('JSX');
+    let intervalId=null;
+    if(compteur===0) intervalId = setInterval(this.tirageAleatoire, 4000, intervalId);
+  }
+
+  render() {
+    this.constJSX();
+    return (
+      <div>
+      {this.state.affichage}
+      {console.log('AFFICHAGE')}
+      <Simon />
+      </div>
+    )
+  }
+}
+
+export default App;

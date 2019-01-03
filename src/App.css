@@ -1,32 +1,110 @@
 .App {
   text-align: center;
+  /* background: #282c34; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#container{
+  margin-top:3%;
+  width: 600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #081329;
+  border-radius:64px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
+}
+
+#simonHaut{
+  width: 600px;
+  height: 300px;
+  /* border: solid 1px black; */
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:end;
+  margin-bottom: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+#simonBas{
+  width: 600px;
+  height: 300px;
+  /* border: solid 1px black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:start;
+  margin-top: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#boutonJeu{
+  position:absolute;
+}
+
+.bleu {
+  width: 280px;
+  height: 280px; 
+
+  border-radius: 17px 0 0 0;
+  margin-right: 2px;
+}
+
+.bleuUp{
+  background: #000272;
+}
+
+.bleuDown{
+  background: #0004fc;
+}
+
+.jaune {
+  width: 280px;
+  height: 280px; 
+  border-radius: 0 17px 0 0;
+  margin-left: 2px;
+}
+
+.jauneUp{
+  background: #7a6800;
+}
+
+.jauneDown{
+  background: #ffd900;
+}
+
+#vert {
+  width: 280px;
+  height: 280px; 
+  border-radius: 0 0 0 17px;
+  margin-right: 2px;
+}
+
+.vertUp{
+  background: #053800;
+}
+
+.vertDown{
+  background: #15ff00;
+}
+
+#rouge {
+  width: 280px;
+  height: 280px; 
+  border-radius: 0 0 17px 0;
+  margin-left: 2px;
+}
+
+.rougeUp{
+  background: #770000;
+}
+
+.rougeDown{
+  background: #ff0000;
+}
+
+#boutonJeu img{
+  width: 172px;
+
 }
